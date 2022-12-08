@@ -5,11 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { MovieComponent } from './movie/movie.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, /* This is an empty path when there is no path */
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'movie', component: MovieComponent },
-  { path: '**', component: LoginComponent } /* when none of the path matches */
+  { path: 'movie/:type/:id', component: MovieComponent },
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({

@@ -1,27 +1,32 @@
 <div class="login-container">
-  <img class="film" src="assets/images/film.png">
-  <img class="main-logo" src="assets/images/logo.png">
-  <div class="logo">
-    Rotten Tomatoes
-  </div>
+  <img class="film" src="assets/images/film.png" alt="" />
+  <div class="logo">Rotten Potatoes</div>
   <div class="desc">
-    Rotten Tomatoes, home of the Tomatometer, is the most trusted measurement of quality for Movies
-    & TV. The definitive site for Reviews, Trailers, Showtimes.
+    Rotten Potatoes is the world’s most trusted recommendation resources for
+    quality entertainment.
   </div>
-  <div class="login-form">
+    <div class="login-form">
     <div class="form-group">
       <label for="uname">Username</label>
-      <input type="text" name="uname" class="form-control" [(ngModel)]="username" />
+      <input
+        type="text"
+        name="uname"
+        class="form-control"
+        [(ngModel)]="username"
+      />
     </div>
     <div class="form-group">
       <label for="pword">Password</label>
-      <input type="password" name="pword" class="form-control" [(ngModel)]="password" />
+      <input
+        type="password"
+        name="pword"
+        class="form-control"
+        [(ngModel)]="password"
+      />
     </div>
     <div class="btn-container">
       <div class="error">{{ errorMsg }}</div>
-      <button class="btn btn-dark" (click)="login()">
-        Login
-      </button>
+      <button class="btn btn-dark" (click)="login()" id="my-Btn">Login</button>
     </div>
   </div>
 </div>

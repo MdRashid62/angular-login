@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   password = "";
   errorMsg = "";
 
-  constructor( private auth: AuthService, private router: Router ) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,11 +21,9 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.username.trim().length === 0) {
       this.errorMsg = "Username is required";
-    }
-    else if (this.password.trim().length === 0) {
+    } else if (this.password.trim().length === 0) {
       this.errorMsg = "Password is required";
-    }
-    else {
+    } else {
       this.errorMsg = "";
       let res = this.auth.login(this.username, this.password);
       if (res === 200) {
